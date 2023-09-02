@@ -11,5 +11,5 @@
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
 /index.webmanifest
   Content-Type: application/manifest+json
-/index.xml
+index.xml
   Content-Type: application/rss+xml
