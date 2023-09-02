@@ -1,0 +1,884 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Source Themes Academic 4.6.0">
+<meta name=author content="Nouamane Tazi">
+<meta name=description content="Final year Master's student in AI at [University of Paris Saclay - CentraleSupélec](https://www.centralesupelec.fr/en)">
+<link rel=alternate hreflang=en-us href=https://nouamanetazi.github.io/>
+<meta name=theme-color content="#2962ff">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css crossorigin=anonymous title=hl-light>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css crossorigin=anonymous title=hl-dark disabled>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel=stylesheet href=/css/academic.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152866805-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){document.location=a}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target)}gtag('js',new Date),gtag('config','UA-152866805-1',{}),document.addEventListener('click',onClickCallback,!1)</script>
+<link rel=alternate href=/index.xml type=application/rss+xml title="Nouamane Tazi | Homepage">
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/img/icon-32.png>
+<link rel=apple-touch-icon type=image/png href=/img/icon-192.png>
+<link rel=canonical href=https://nouamanetazi.github.io/>
+<meta property="twitter:card" content="summary">
+<meta property="og:site_name" content="Nouamane Tazi | Homepage">
+<meta property="og:url" content="https://nouamanetazi.github.io/">
+<meta property="og:title" content="Nouamane Tazi | Homepage">
+<meta property="og:description" content="Final year Master's student in AI at [University of Paris Saclay - CentraleSupélec](https://www.centralesupelec.fr/en)"><meta property="og:image" content="https://nouamanetazi.github.io/img/icon-512.png">
+<meta property="twitter:image" content="https://nouamanetazi.github.io/img/icon-512.png"><meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2022-02-12T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"WebSite","potentialAction":{"@type":"SearchAction","target":"https://nouamanetazi.github.io/?q={search_term_string}","query-input":"required name=search_term_string"},"url":"https://nouamanetazi.github.io/"}</script>
+<script type=text/javascript>window.$crisp=[],window.CRISP_WEBSITE_ID="e6cf2da7-2308-49c1-92b3-262fadc7ed5f",function(){d=document,s=d.createElement("script"),s.src="https://client.crisp.chat/l.js",s.async=1,d.getElementsByTagName("head")[0].appendChild(s)}()</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152866805-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152866805-1')</script>
+<title>Nouamane Tazi | Homepage</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#navbar-main>
+<aside class=search-results id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=#><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<a class=navbar-brand href=/><img src=/img/icon-512.png alt="Nouamane Tazi | Homepage"></a>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#posts data-target=#posts><span>Posts</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#experience data-target=#experience><span>Experience</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#accomplishments data-target=#accomplishments><span>Accomplishments</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#projects data-target=#projects><span>Projects</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#talks data-target=#talks><span>Talks</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact data-target=#contact><span>Contact</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/files/Nouamane_TAZI_resume.pdf><span>CV</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=#><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class=nav-item>
+<a class="nav-link js-dark-toggle" href=#><i class="fas fa-moon" aria-hidden=true></i></a>
+</li>
+</ul>
+</div>
+</nav>
+<span class="js-widget-page d-none"></span>
+<section id=about class="home-section wg-about">
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4">
+<div id=profile>
+<img class=portrait src=/authors/admin/avatar_hu0fad2b67df9e84000c067b11d7c013b7_968508_250x250_fill_q90_lanczos_center.jpg alt=Avatar>
+<div class=portrait-title>
+<h2>Nouamane Tazi</h2>
+<h3>Final year Master&rsquo;s student in AI at <a href=https://www.centralesupelec.fr/en>University of Paris Saclay - CentraleSupélec</a></h3>
+</div>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:nouamane.tazi@student-cs.fr>
+<i class="fas fa-envelope big-icon"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/Nouamanetazi target=_blank rel=noopener>
+<i class="fab fa-twitter big-icon"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/nouamanetazi/ target=_blank rel=noopener>
+<i class="fab fa-linkedin big-icon"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/NouamaneTazi target=_blank rel=noopener>
+<i class="fab fa-github big-icon"></i>
+</a>
+</li>
+<li>
+<a href=/files/Nouamane_TAZI_resume.pdf>
+<i class="ai ai-cv big-icon"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-12 col-lg-8">
+<h1>Bio</h1>
+<p><em>(Please check my LinkedIn for the latest updates)</em></p>
+<p>Absolutely passionate about AI in all of its aspects. I am constantly learning and expanding my skills. While you are reading this, I am probably busy learning something new.</p>
+<p>Seeking a 5+ months end-of-studies internship starting May 2022.</p>
+<div class=row>
+<div class=col-md-5>
+<h3>Interests</h3>
+<ul class=ul-interests>
+<li>Artificial Intelligence</li>
+<li>Software Engineering</li>
+<li>Design</li>
+<li>Piano</li>
+<li>Innovation.</li>
+</ul>
+</div>
+<div class=col-md-7>
+<h3>Education</h3>
+<ul class="ul-edu fa-ul">
+<li>
+<i class="fa-li fas fa-graduation-cap"></i>
+<div class=description>
+<p class=course>Master's studies in AI, 2018 - now</p>
+<p class=institution>University of Paris Saclay - CentraleSupélec</p>
+</div>
+</li>
+<li>
+<i class="fa-li fas fa-graduation-cap"></i>
+<div class=description>
+<p class=course>Advanced mathematics, physics and engineering classes, 2016 - 2018</p>
+<p class=institution>Moulay Youssef Highschool (CPGE)</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=posts class="home-section wg-pages">
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Recent Posts</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class="media stream-item">
+<div class=media-body>
+<h3 class="article-title mb-0 mt-0">
+<a href=/post/conseils-prepa/>Study Tips for preparatory classes students.</a>
+</h3>
+<div class=article-style>
+De manière générale : La bonne gestion du temps : L’ultime ressource de la prépa! Il me faut commencer tout d’abord par fixer mes …
+</div>
+<div class="stream-meta article-metadata">
+<div class=article-metadata>
+<span class=article-date>
+Aug 15, 2019
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+8 min read
+</span>
+</div>
+</div>
+</div>
+<div class=ml-3>
+<a href=/post/conseils-prepa/>
+<img src=/post/conseils-prepa/featured_hu4a5a086090659d76bc77fc8472919568_4631103_150x0_resize_q90_lanczos.jpg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=experience class="home-section wg-experience">
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Experience</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class="row experience">
+<div class="col-auto text-center flex-column d-none d-sm-flex">
+<div class="row h-50">
+<div class=col>&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+<div class=m-2>
+<span class="badge badge-pill border">&nbsp;</span>
+</div>
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+</div>
+<div class="col py-2">
+<div class=card>
+<div class=card-body>
+<h4 class="card-title exp-title text-muted mt-0 mb-1">Software Engineer</h4>
+<h4 class="card-title exp-company text-muted my-0">Flashbrand</h4>
+<div class="text-muted exp-meta">
+Aug 2020 –
+Feb 2021
+<span class=middot-divider></span>
+<span>San Francisco, CA</span>
+</div>
+<div class=card-text><ul>
+<li><strong>CI/CD Data Warehousing Setup</strong>, schema design and management of Azure. Built Azure pipelines to automatically build and
+test code projects, integrated with our Github repositories.</li>
+<li><strong>Chatbot</strong> Core service for all NLP systems at Flashbrand, currently used on the homepage with the support of a simple-to-use
+Dialog Managment UI. Worked on both *fine-tuning (RoBERTa and CamemBERT) and online serving.</li>
+<li><strong>Performance Dashboards</strong> Manager dashboards and employees surveying tools, which helped boosting employees' skills,
+engagement and performance. Developed the API and wrote the SQL queries for it.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row experience">
+<div class="col-auto text-center flex-column d-none d-sm-flex">
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+<div class=m-2>
+<span class="badge badge-pill border">&nbsp;</span>
+</div>
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+</div>
+<div class="col py-2">
+<div class=card>
+<div class=card-body>
+<h4 class="card-title exp-title text-muted mt-0 mb-1">ML Engineer</h4>
+<h4 class="card-title exp-company text-muted my-0">ANIMA - iWips</h4>
+<div class="text-muted exp-meta">
+Jun 2020 –
+Aug 2020
+<span class=middot-divider></span>
+<span>Paris, France</span>
+</div>
+<div class=card-text><ul>
+<li><strong>Microservices Architecture</strong> Implemented Apache Kafka to read, process, and store streams of data coming for a multiplayer
+game, for better scalability, guaranteed reliability and fast performance.</li>
+<li><strong>Real-time Dashboard</strong> Developed multiple microservices to perform various model inferences (sentiment analysis, topic
+modeling..) on the players' conversation mid-game, summarized in a dashboard that analyzes the players' behaviour and skills.</li>
+<li><strong>Security & Load Balancing</strong> Secured players' audio capture using a HTTPS and SSL connection. Used Docker and Kubernetes
+for easy deployment and auto-scaling.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row experience">
+<div class="col-auto text-center flex-column d-none d-sm-flex">
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+<div class=m-2>
+<span class="badge badge-pill border">&nbsp;</span>
+</div>
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+</div>
+<div class="col py-2">
+<div class=card>
+<div class=card-body>
+<h4 class="card-title exp-title text-muted mt-0 mb-1">Data Scientist</h4>
+<h4 class="card-title exp-company text-muted my-0">SAFRAN</h4>
+<div class="text-muted exp-meta">
+Apr 2020 –
+Jun 2020
+<span class=middot-divider></span>
+<span>Paris, France</span>
+</div>
+<div class=card-text><ul>
+<li><strong>Machine Learning</strong> Used machine learning techniques to help predict the runway condition using aircraft braking data. (Our
+best model&rsquo;s MAE is 0.01, and is currently being developed by SAFRAN&rsquo;s team for better results)</li>
+<li><strong>Data Analysis</strong> Identified most prominent factors in runway condition with effective use of data to help SAFRAN take informed
+decisions.</li>
+<li><strong>Recommendation</strong> Designed dashboards and presentation decks to present key insights and actionable recommendations to
+clients.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row experience">
+<div class="col-auto text-center flex-column d-none d-sm-flex">
+<div class="row h-50">
+<div class="col border-right">&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+<div class=m-2>
+<span class="badge badge-pill border">&nbsp;</span>
+</div>
+<div class="row h-50">
+<div class=col>&nbsp;</div>
+<div class=col>&nbsp;</div>
+</div>
+</div>
+<div class="col py-2">
+<div class=card>
+<div class=card-body>
+<h4 class="card-title exp-title text-muted mt-0 mb-1">ML Engineer</h4>
+<h4 class="card-title exp-company text-muted my-0">ALSTOM</h4>
+<div class="text-muted exp-meta">
+Feb 2020 –
+Apr 2020
+<span class=middot-divider></span>
+<span>Paris, France</span>
+</div>
+<div class=card-text><ul>
+<li><strong>Document Parsing</strong> Used several libraries, such as Tesseract OCR, to parse the various formats (pdf, docx, xlsx..) of documents
+existing in ALSTOM&rsquo;s database, and integrated them with the rest of the processing pipeline.</li>
+<li><strong>Knowledge Graph</strong> Designed a knowledge graph, using state-of-the-art NLP techniques, that helps capture and structure the
+key entities, and easily access documents from a 20Gb+ database, currently used by 8000+ employees at ALSTOM.</li>
+<li><strong>Search Engine</strong> Created an internal search engine using Elasticsearch indexing, which uses filters and our structuration of the
+data, for an easier navigation in ALSTOM&rsquo;s large databases.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=accomplishments class="home-section wg-accomplishments">
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Accomplish­ments</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">Finalist in the BCG Gamma Data Challenge</h4><div class="card-subtitle my-0 article-metadata"><a href=https://www.bcg.com/ target=_blank rel=noopener>BCG</a><span class=middot-divider></span>
+Dec 2021
+– Dec 2021
+</div>
+<div class=card-text>Strategy project with a data science component in a fast-paced environment, where the goal is to forecast traffic in Paris.</div>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">HuggingFace Course Completion</h4><div class="card-subtitle my-0 article-metadata"><a href=https://huggingface.co/ target=_blank rel=noopener>HuggingFace</a><span class=middot-divider></span>
+Nov 2021
+</div>
+<a class=card-link href="https://media-exp1.licdn.com/dms/image/C4E22AQFdBULJJ644PA/feedshare-shrink_2048_1536/0/1638232697359?e=1642636800&v=beta&t=lKR4cV7kxwWSz-x6nqS_Db2oEWeRhXI9-KmZgpb1tZY" target=_blank rel=noopener>
+See certificate
+</a>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><a href=https://nouamanetazi.me/talk/ai4ia/ target=_blank rel=noopener><h4 class="card-title exp-title text-muted my-0">Finalist in the Artificial Intelligence for Industrial Application Hackathon (AI4IA)</h4></a><div class="card-subtitle my-0 article-metadata">SKF & ArianeGroup & Atos & MathWorks & AWS & Techniques de l&rsquo;Ingénieur<span class=middot-divider></span>
+Oct 2021
+– Dec 2021
+</div>
+<div class=card-text>Timeseries prediction using data extracted from a concrete industrial application.</div>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">Deep Learning Specialization</h4><div class="card-subtitle my-0 article-metadata"><a href=https://www.deeplearning.ai/ target=_blank rel=noopener>DeepLearning.AI</a><span class=middot-divider></span>
+Sep 2021
+</div>
+<a class=card-link href=https://www.coursera.org/account/accomplishments/specialization/certificate/XCYNXNSD9CVD target=_blank rel=noopener>
+See certificate
+</a>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">Machine Learning Course by Andrew Ng</h4><div class="card-subtitle my-0 article-metadata"><a href=https://www.coursera.org target=_blank rel=noopener>Coursera</a><span class=middot-divider></span>
+Nov 2019
+</div>
+<a class=card-link href=https://www.coursera.org target=_blank rel=noopener>
+See certificate
+</a>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">Earning the Vice-president of IT title in Maths&Maroc</h4><div class="card-subtitle my-0 article-metadata"><a href=http://www.mathemaroc.com target=_blank rel=noopener>Maths&Maroc</a><span class=middot-divider></span>
+Nov 2019
+</div>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><a href=https://automatants.cs-campus.fr target=_blank rel=noopener><h4 class="card-title exp-title text-muted my-0">Co-Founder of the AI Club of CentraleSupélec</h4></a><div class="card-subtitle my-0 article-metadata"><a href=https://automatants.cs-campus.fr target=_blank rel=noopener>Automatants</a><span class=middot-divider></span>
+Dec 2018
+</div>
+</div>
+</div>
+<div class="card experience course">
+<div class=card-body><h4 class="card-title exp-title text-muted my-0">Participating in a voluntary caravan around Morocco to motivate and encourage preparatory classes students on taking the french contests to the &ldquo;Grandes écoles&rdquo;</h4><div class="card-subtitle my-0 article-metadata"><a href=https://amge-caravane.org target=_blank rel=noopener>AMGE-Caravane</a><span class=middot-divider></span>
+Nov 2018
+</div>
+<a class=card-link href=../certificates/amge-caravane.pdf target=_blank rel=noopener>
+See certificate
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=projects class="home-section wg-portfolio">
+<div class=container>
+<div class=row>
+<div class="col-xs-12 col-md-4 section-heading">
+<h1>Projects</h1>
+</div>
+<div class="col-xs-12 col-md-8">
+<span class="d-none default-project-filter">*</span>
+<div class=project-toolbar>
+<div class=project-filters>
+<div class=btn-toolbar>
+<div class="btn-group flex-wrap">
+<a href=# data-filter=* class="btn btn-primary btn-lg active">All</a>
+<a href=# data-filter=.js-id-Time-Series class="btn btn-primary btn-lg">Time Series</a>
+<a href=# data-filter=.js-id-NLP class="btn btn-primary btn-lg">NLP</a>
+<a href=# data-filter=.js-id-Speech class="btn btn-primary btn-lg">Speech</a>
+<a href=# data-filter=.js-id-Computer-Vision class="btn btn-primary btn-lg">Computer Vision</a>
+<a href=# data-filter=.js-id-PINN class="btn btn-primary btn-lg">PINN</a>
+<a href=# data-filter=.js-id-TinyML class="btn btn-primary btn-lg">TinyML</a>
+<a href=# data-filter=.js-id-Software-Engineering class="btn btn-primary btn-lg">Software Engineering</a>
+<a href=# data-filter=.js-id-Robotics class="btn btn-primary btn-lg">Robotics</a>
+<a href=# data-filter=.js-id-Web-Dev class="btn btn-primary btn-lg">Web Dev</a>
+</div>
+</div>
+</div>
+</div>
+<div class="isotope projects-container row js-layout-row project-showcase mt-5">
+<div class="col-lg-12 project-item isotope-item js-id-NLP js-id-ML-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">HuggingFace Search Engine</h3>
+<div class=article-style>
+A semantic search engine for HuggingFace using <a href=https://www.sbert.net/><code>sentence-transformers</code></a>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/NouamaneTazi/hf_search target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://huggingface.co/spaces/nouamanetazi/hf-search target=_blank rel=noopener>
+Demo
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/huggingface-search-engine/featured_hu871db46b241cdff4f1605d02a338b3c0_85582_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-NLP js-id-Speech js-id-ML-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Arabic Speech Recognition</h3>
+<div class=article-style>
+Fine-tuned Facebook&rsquo;s <code>XLS-R</code> model to transcribe speech in Arabic.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://huggingface.co/nouamanetazi/wav2vec2-xls-r-300m-ar target=_blank rel=noopener>
+<i class="fa fa-laptop-code mr-1"></i>
+Model
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<img src=/project/arabic-speech-recognition/featured_hu78c804380929d285724af47cc24dc0ea_33790_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-NLP js-id-ML-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Clinical NLP</h3>
+<div class=article-style>
+Performing multiple NLP tasks (<code>NER</code>, <code>Relation Extraction</code>, <code>NLI</code>&mldr;) on a EHR database.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/Mustapha-AJEGHRIR/medical_txt_parser target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/clinical-nlp/featured_huf01deaf360eaf830d08b59d670f6f44c_61566_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Computer-Vision">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">License Plates Detection</h3>
+<div class=article-style>
+Fine-tuned Facebook&rsquo;s <code>DETR</code> model to detect moroccan vehicules license plates.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://www.kaggle.com/nouamane/fine-tuning-detr-for-license-plates-detection target=_blank rel=noopener>
+<i class="fa fa-laptop-code mr-1"></i>
+Kaggle
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<img src=/project/license-plates-detection/featured_hub69ee05d0481bb31e5c3f6145f2166a3_235513_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-PINNs js-id-Digital-Twin">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Simulating Magnetic Bearings</h3>
+<div class=article-style>
+Modeling complex magnetic bearings using <a href=https://github.com/lululxvi/deepxde><code>deepxde</code></a> for PINNs.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://huggingface.co/nouamanetazi/wav2vec2-xls-r-300m-ar target=_blank rel=noopener>
+<i class="fa fa-laptop-code mr-1"></i>
+Model
+</a>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://nouamanetazi.me/talk/ai4ia/ target=_blank rel=noopener>
+Project
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/pinns/featured_hu13e97cfc134378d6ff3e4fc896ffdd89_238307_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Time-Series js-id-ML-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Paris Traffic Forecasting</h3>
+<div class=article-style>
+Forecasting paris traffic using paris' opendata and Google&rsquo;s <code>TFT</code> model
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/NouamaneTazi/paris-traffic-forecast target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<img src=/project/paris-traffic-forecast/featured_hu89c7f1b65dba0f426561b61d189e8ffd_95372_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-NLP js-id-ML-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Cover Letter Generator</h3>
+<div class=article-style>
+A cover letter generator featuring a fine-tuned <code>T5-base</code> model on a scraped cover letters database.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://huggingface.co/spaces/nouamanetazi/cover-letter-generator target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/cover-letter-generator/featured_huc626ad14765945e8af48352bc1eca88d_216757_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Software-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Website Monitor</h3>
+<div class=article-style>
+A tool that helps you monitor a collection of websites using various metrics, built in <code>Go</code>.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/NouamaneTazi/website-monitor target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<img src=/project/website-monitor/featured_hu9fd1e75791f914e89341b5f80bf9f881_173894_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Web-Dev js-id-Software-Engineering js-id-NLP">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Speech Insight</h3>
+<div class=article-style>
+A real-time speech analyzing dashboard leveraging machine learning microservices built using <code>Kafka</code>, <code>HuggingFace</code> and <code>Docker</code>.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=/files/speech-insight.mp4 target=_blank rel=noopener>
+Video
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/speech-insight/featured_hua9d0d2fe2eb869ed92a5e88612491211_299338_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Web-Dev js-id-Software-Engineering js-id-NLP">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Search Engine</h3>
+<div class=article-style>
+A search engine leveraging hierarchical clustering built using <code>ElasticSearch</code>, <code>TF-IDF</code> and <code>Tesseract OCR</code>.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=/slides/Preview%20Search%20Engine%20-%20ALSTOM.pdf>
+Preview
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<img src=/project/search-engine/featured_hu3868d04531fdfd71564a15d97525df64_140050_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Web-Dev js-id-Software-Engineering">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0">Pictionary</h3>
+<div class=article-style>
+A multiplayer drawing game built using <code>NodeJS</code>, <code>Express</code> and <code>React Material-UI</code>.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://nouamane-pictionary.herokuapp.com target=_blank rel=noopener>
+Project
+</a>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/NouamaneTazi/Pictionary target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first">
+<img src=/project/pictionary/featured_hu1f58e064e1c7df5a0ffe41ec48ec7922_89088_540x0_resize_lanczos_3.png alt>
+</div>
+</div>
+</div>
+<div class="col-lg-12 project-item isotope-item js-id-Robotics">
+<div class="row align-items-center">
+<div class="col-12 col-md-6">
+<h3 class="article-title mb-0 mt-0"><a href=https://medium.com/@nouamanetazi/automated-driving-robot-with-a-raspberry-pi-an-arduino-a-pi-camera-and-an-ultrasonic-sensor-9e74a0dfc7e target=_blank rel=noopener>Autonomous Robot</a></h3>
+<div class=article-style>
+Automated driving Robot with a <code>Raspberry Pi</code>, an <code>Arduino</code>, a <code>Pi Camera</code> and an <code>Ultrasonic Sensor</code>.
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://medium.com/@nouamanetazi/automated-driving-robot-with-a-raspberry-pi-an-arduino-a-pi-camera-and-an-ultrasonic-sensor-9e74a0dfc7e target=_blank rel=noopener>
+<i class="fab fa-medium mr-1"></i>
+Tutorial
+</a>
+<a class="btn btn-outline-primary my-1 mr-1" href=https://github.com/NouamaneTazi/Cherokey4WD_Python target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<div class="col-12 col-md-6 order-first order-md-2">
+<a href=https://medium.com/@nouamanetazi/automated-driving-robot-with-a-raspberry-pi-an-arduino-a-pi-camera-and-an-ultrasonic-sensor-9e74a0dfc7e target=_blank rel=noopener>
+<img src=/project/autonomous-robot/featured_hufd701a3cba93313c4c5b32a9c3494214_108098_540x0_resize_q90_lanczos.jpg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=talks class="home-section wg-pages">
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Previous & Upcoming Talks</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class=card-simple>
+<div class=article-metadata>
+<span>
+Dec 15, 2021
+</span>
+<span class=middot-divider></span>
+<span>Campus de l'Espace - Vernon, France.</span>
+</div>
+<a href=/talk/ai4ia/>
+<img src=/talk/ai4ia/featured_huffdc4ce845c53b3952ef84cb2df5d546_58303_918x517_fill_q90_lanczos_right.jpeg class=article-banner alt>
+</a>
+<h3 class="article-title mb-1 mt-3">
+<a href=/talk/ai4ia/>Hackathon Pitch</a>
+</h3>
+<div class=article-style>
+<p>Pitching my work in the Artificial Intelligence for Industrial Application Hackathon.</p>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href=https://www.agorize.com/en/challenges/ai4ia target=_blank rel=noopener>
+Link
+</a>
+</div>
+</div>
+<div class=card-simple>
+<div class=article-metadata>
+<span>
+Oct 24, 2019
+</span>
+<span class=middot-divider></span>
+<span>Discovery Palace - Paris, France.</span>
+</div>
+<a href=/talk/palais_decouverte/>
+<img src=/talk/palais_decouverte/featured_hu90a8d02dc0f4e4a32304cbccfaaf6282_6844808_918x517_fill_q90_lanczos_right.jpg class=article-banner alt>
+</a>
+<h3 class="article-title mb-1 mt-3">
+<a href=/talk/palais_decouverte/>Discovery Palace's talk</a>
+</h3>
+<div class=article-style>
+<p>Presenting my researches to the public.</p>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href=http://www.palais-decouverte.fr/fr/ressources/docs-1chercheur1manip/centralesupelec2019/ target=_blank rel=noopener>
+Link
+</a>
+</div>
+</div>
+<div class=card-simple>
+<div class=article-metadata>
+<span>
+Nov 12, 2018 &mdash; Nov 16, 2018
+</span>
+</div>
+<a href=/talk/amge_caravane/>
+<img src=/talk/amge_caravane/featured_hub15886db97c399059b35b070be3a3b8c_3254125_918x517_fill_q90_lanczos_right.jpg class=article-banner alt>
+</a>
+<h3 class="article-title mb-1 mt-3">
+<a href=/talk/amge_caravane/>AMGE-Caravane Talks</a>
+</h3>
+<div class=article-style>
+<p>Series of Talks done during the AMGE-Caravane&rsquo;s north caravan in Morocco.</p>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href=/slides/Caravane-Scientifique_Nord.pdf target=_blank rel=noopener>
+Slides
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=contact class="home-section wg-contact">
+<div class=container>
+<div class="row contact-widget">
+<div class="col-12 col-lg-4 section-heading">
+<h1>Contact</h1>
+</div>
+<div class="col-12 col-lg-8">
+<ul class=fa-ul>
+<li>
+<i class="fa-li fas fa-envelope fa-2x" aria-hidden=true></i>
+<span id=person-email><a href=mailto:nouamane.tazi@student-cs.fr>nouamane.tazi@student-cs.fr</a></span>
+</li>
+<li>
+<i class="fa-li fas fa-map-marker fa-2x" aria-hidden=true></i>
+<span id=person-address>Palaiseau 91120, France</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",talk:"Talks"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/academic.min.c7eb7cc2cf1768f08b622efd5f197db4.js></script>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+©
+2021 &#183;
+Nouamane Tazi
+<span class=float-right aria-hidden=true>
+<a href=# class=back-to-top>
+<span class=button_icon>
+<i class="fas fa-chevron-up fa-2x"></i>
+</span>
+</a>
+</span>
+</p>
+</footer>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
